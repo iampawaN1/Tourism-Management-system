@@ -1,0 +1,146 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #161813;
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100px;
+    padding: 20px 10vw;
+}
+
+.navbar.bg{
+    background: #161813;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.logo{
+    height: 50px;
+    margin-top: 10px;
+}
+
+.link-item{
+    margin: 0 20px;
+    transition: .5s;
+}
+
+.link-item a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.link-item:hover{
+    transform: scale(1.2);
+}
+
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-section-title{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 80px;
+    text-align: center;
+    text-transform: capitalize; 
+}
+
+.hero-section-sub-heading{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.scroll-down-icon{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    animation: down ease 1s infinite;
+}
+
+@keyframes down{
+    from { bottom: 10% }
+    to { bottom: 8% }
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.background::before, .background::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.background::before{
+    top: 0;
+    left: 0;
+    background: var(--gradient-top);
+}
+
+.background::after{
+    bottom: 0;
+    background: var(--gradient-bottom);
+}
+
+.grid-slider{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-item{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    transition: .5s;
+}
+
+.grid-item.hide{
+    opacity: 0;
+}
